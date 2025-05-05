@@ -12,4 +12,15 @@ UNIT-V JPA JPA: Introduction & overview of data persistence, Overview of ORM too
 UNIT 1 INTRODUCTION JDBC (java database connectivity)----------------------------------------------------------
 UNIT-I Introduction JDBC: 
 Introduction, JDBC Driver, DB Connectivity, Driver Manager, Connection, Statement, Result Set, Prepared 8 Hours Statement, Transaction Management, Stored Procedures. Servlet: Servlet Overview, Servlet API, Servlet Interface, Generic Servlet, HTTP Servlet, Servlet Life Cycle, Redirect requests to other resources, Session Tracking, Event and Listener. 
+introduction
+definition=jdbc(java database connectivity) is a java api that enables java applications to interact with relational database like mysql, oracle using SQL. It provides a standard interface for connecting to database, executing queries, and retrieving results, making java programs database-intependent.
+JDBC components:
+1. jdbc api: core interfaces and classes in the java.sql and javax.sql packages.
+a.	Driver manager=manages database drivers and establishes connnecitons
+b.	Connections=represents a database session
+c.	Statement=executes sql queries
+d.	resultSet=holds query results for processing
+e.	preparedstatement=precompiled sql for secure, efficient queries.
+2. jdbc drivers: database specific implementation of jdbc interfaces, provided by database vendors like connector/j
+3. database: the relational database accessed via jdbc.
 
