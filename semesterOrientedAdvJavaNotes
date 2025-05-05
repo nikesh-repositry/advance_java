@@ -28,5 +28,10 @@ JDBC architecture:
 1.client layer(a jdbc client is any java application or applet that connects to a server based database using jdbc api)
 2.driver manager layer(the driver manager is a service of the jdbc api that manage the drivers and establishes a connection between a jdbc client and a database server.)
 3.database server(a database server is a software program that provides database management functionality within a networked computing environment.)
+The flow is like :
+Application calls jdbc api-> the jdbc api delegates to the driver    ->driver communicates with the database, executes sql, and returns result via resultset.
+[Java Application] --> [JDBC API] --> [JDBC Driver] --> [Database]
+   (Your LMS code)      (java.sql)    (e.g., MySQL    (e.g., MySQL)
+                                       Connector/J)
 
 
