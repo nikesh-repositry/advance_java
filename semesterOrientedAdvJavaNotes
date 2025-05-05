@@ -13,7 +13,8 @@ UNIT 1 INTRODUCTION JDBC (java database connectivity)---------------------------
 UNIT-I Introduction JDBC: 
 Introduction, JDBC Driver, DB Connectivity, Driver Manager, Connection, Statement, Result Set, Prepared 8 Hours Statement, Transaction Management, Stored Procedures. Servlet: Servlet Overview, Servlet API, Servlet Interface, Generic Servlet, HTTP Servlet, Servlet Life Cycle, Redirect requests to other resources, Session Tracking, Event and Listener. 
 introduction
-definition=jdbc(java database connectivity) is a java api that enables java applications to interact with relational database like mysql, oracle using SQL. It provides a standard interface for connecting to database, executing queries, and retrieving results, making java programs database-intependent.
+definition:
+jdbc(java database connectivity) is a java api that enables java applications to interact with relational database like mysql, oracle using SQL. It provides a standard interface for connecting to database, executing queries, and retrieving results, making java programs database-intependent.
 JDBC components:
 1. jdbc api: core interfaces and classes in the java.sql and javax.sql packages.
 a.	Driver manager=manages database drivers and establishes connnecitons
@@ -23,4 +24,9 @@ d.	resultSet=holds query results for processing
 e.	preparedstatement=precompiled sql for secure, efficient queries.
 2. jdbc drivers: database specific implementation of jdbc interfaces, provided by database vendors like connector/j
 3. database: the relational database accessed via jdbc.
+JDBC architecture:
+1.client layer(a jdbc client is any java application or applet that connects to a server based database using jdbc api)
+2.driver manager layer(the driver manager is a service of the jdbc api that manage the drivers and establishes a connection between a jdbc client and a database server.)
+3.database server(a database server is a software program that provides database management functionality within a networked computing environment.)
+
 
