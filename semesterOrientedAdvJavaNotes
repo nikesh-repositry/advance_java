@@ -1,5 +1,5 @@
         ADVANCE JAVA SEMESTER ORIENTED
-UNIT-I Introduction JDBC: Introduction, JDBC Driver, DB Connectivity, Driver Manager, Connection, Statement, Result Set, Prepared 8 Hours Statement, Transaction Management, Stored Procedures. Servlet: Servlet Overview, Servlet API, Servlet Interface, Generic Servlet, HTTP Servlet, Servlet Life Cycle, Redirect requests to other resources, Session Tracking, Event and Listener.  
+UNIT-I Introduction JDBC: Introduction, JDBC Driver, DB Connectivity, Driver Manager, Connection, Statement, Result Set, Prepared 8 Hours Statement, Transaction Management, Stored Procedures. Servlet: Servlet Overview, Servlet API, Servlet Interface, Generic Servlet, HTTP Servlet, Servlet Life Cycle, Redirect requests to other resources, Session Tracking, Event and Listener.   
 
 UNIT-II JSP JSP: Introduction, Overview, JSP Scriptlet Tag, JSP expression Tag, JSP declaration Tag, Life Cycle of JSP, JSP API, Implicit Objects: JSP request, JSP response, JSP config, JSP session, JSP Application, JSP Page Context; JSP Page, JSP Exception. 
 
