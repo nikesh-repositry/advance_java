@@ -13,7 +13,7 @@ UNIT-V JPA JPA: Introduction & overview of data persistence, Overview of ORM too
 
 
 
-UNIT 1 INTRODUCTION JDBC (java database connectivity)----------------------------------------------------------
+UNIT 1 INTRODUCTION JDBC (java database connectivity)-----------------------------------------------------------
 UNIT-I Introduction JDBC: 
 Introduction, JDBC Driver, DB Connectivity, Driver Manager, Connection, Statement, Result Set, Prepared 8 Hours Statement, Transaction Management, Stored Procedures. Servlet: Servlet Overview, Servlet API, Servlet Interface, Generic Servlet, HTTP Servlet, Servlet Life Cycle, Redirect requests to other resources, Session Tracking, Event and Listener. 
 introduction
