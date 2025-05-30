@@ -77,3 +77,11 @@ Easy to use; no additional setup beyond adding the driver JAR.
 Cons: Database-specific (need a different driver per database).
 Use Case: Ideal for your LMS (e.g., MySQL Connector/J for MySQL).
 
+2 MARKERS
+=1. Discuss the steps of setting null value in JDBC PreparedStatement
+1.	Establish a Connection: First, establish a connection to the database using DriverManager.getConnection().
+2.	Create a PreparedStatement: Define your SQL query with placeholders (?) for parameters.
+3.	Use setNull() Method: Assign NULL to a specific parameter using setNull(int parameterIndex, int sqlType).
+4.	Execute the Query: Run the query using executeUpdate() or executeQuery().
+5.	Close the Resources: Always close the PreparedStatement and Connection to free up resources.
+
