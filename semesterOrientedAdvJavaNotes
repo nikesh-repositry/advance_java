@@ -103,3 +103,10 @@ A Servlet object is created when the servlet is first loaded and initialized by 
 3.	Finds the right driver: It iterates through registered drivers and selects the first one that can handle the provided database URL.
 4.	Delegates connection: It tells the chosen driver to establish the actual connection to the database.
 5.	Returns Connection: If successful, you get a Connection object to work with the database.
+
+=5. Explain the use of welcome-file-list
+The <welcome-file-list> element in the web.xml deployment descriptor specifies a list of files that the web server should use as default resources (welcome files) when a user accesses a directory path in a web application without specifying a particular file.
+How It Works:
+•	When a user visits http://example.com/app/, the server checks the <welcome-file-list> to find the default page.
+•	If multiple files are listed, the server tries them in order until it finds one that exists.
+•	If no welcome file is found, the server may display a directory listing or return an error.
