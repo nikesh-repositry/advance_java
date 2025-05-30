@@ -91,3 +91,9 @@ This interface is used to retrieve incoming HTTP request data from a client (bro
 2. HttpServletResponse – Sending Responses to Clients
 This interface is used to create and send responses from the server to the client. It allows setting status codes, sending data, and managing cookies.
 
+=3. When servlet object is created?
+A Servlet object is created when the servlet is first loaded and initialized by the Servlet container (e.g., Tomcat, Jetty).
+•	The web container loads the servlet class.
+•	It then creates an instance of the servlet class (this happens only once in the servlet's lifecycle).
+•	After the instance is created, the container calls the servlet's init() method to initialize it before handling any requests
+
