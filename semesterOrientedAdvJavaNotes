@@ -97,3 +97,9 @@ A Servlet object is created when the servlet is first loaded and initialized by 
 •	It then creates an instance of the servlet class (this happens only once in the servlet's lifecycle).
 •	After the instance is created, the container calls the servlet's init() method to initialize it before handling any requests
 
+=4. Explain the working of DriverManager in JDBC
+1.	Manages JDBC drivers: It keeps track of all available database drivers.
+2.	Uses getConnection(): You call this method with a database URL, username, and password to request a connection.
+3.	Finds the right driver: It iterates through registered drivers and selects the first one that can handle the provided database URL.
+4.	Delegates connection: It tells the chosen driver to establish the actual connection to the database.
+5.	Returns Connection: If successful, you get a Connection object to work with the database.
