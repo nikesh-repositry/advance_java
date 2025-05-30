@@ -85,3 +85,9 @@ Use Case: Ideal for your LMS (e.g., MySQL Connector/J for MySQL).
 4.	Execute the Query: Run the query using executeUpdate() or executeQuery().
 5.	Close the Resources: Always close the PreparedStatement and Connection to free up resources.
 
+=2. Describe the use of HttpServletRequest and HttpServletResponse.
+1. HttpServletRequest – Handling Client Requests
+This interface is used to retrieve incoming HTTP request data from a client (browser). It provides methods to extract details such as request parameters, headers, and session attributes.
+2. HttpServletResponse – Sending Responses to Clients
+This interface is used to create and send responses from the server to the client. It allows setting status codes, sending data, and managing cookies.
+
