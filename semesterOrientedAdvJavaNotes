@@ -155,4 +155,37 @@ The ServletConfig interface allows access to init parameters via getInitParamete
  
 3. Using Annotations (@WebServlet) for Init Parameters
 Instead of web.xml, init parameters can be set using annotations.
+
+=9. Explain the Servlet API.
+The Servlet API is a set of Java interfaces and classes that allow developers to build server-side web components (called servlets) which handle HTTP requests and generate responses. This API is part of the Java EE (Jakarta EE) platform and is provided by the javax.servlet and javax.servlet.http packages (or jakarta.servlet in newer versions).
+Purpose of the Servlet API
+•	To enable Java applications to communicate with web clients (browsers).
+•	To allow dynamic generation of HTML, JSON, XML, etc., based on client requests.
+•	To handle complex web-based business logic on the server side.
+javax.servlet package:
+Contains core interfaces and classes like Servlet, ServletRequest, ServletResponse, and ServletConfig that define the contract between the servlet and the servlet container.
+
+javax.servlet.http package:
+Provides HTTP-specific classes and interfaces such as HttpServlet, HttpServletRequest, and HttpServletResponse for handling HTTP protocol requests and responses.
+
+Servlet Lifecycle (as defined by the API)
+1.Loading and Instantiation:
+The servlet container loads the servlet class and creates an instance.
+
+2.Initialization (init()):
+The container calls the init() method once to initialize the servlet.
+
+3.Request Handling (service()):
+For each client request, the container calls the service() method, which processes requests and generates responses. For HTTP servlets, this is usually delegated to methods like doGet() or doPost().
+
+4.Destruction (destroy()):
+When the servlet is taken out of service, the destroy() method is called to release resources.
+
+Request and Response Handling
+ServletRequest & ServletResponse:
+These interfaces provide methods to read client data (parameters, headers, input streams) and write responses (content type, output streams).
+
+HttpServletRequest & HttpServletResponse:
+Extend the above interfaces to provide HTTP-specific functionality, such as handling sessions, cookies, and HTTP methods (GET, POST, etc.)
  
+
