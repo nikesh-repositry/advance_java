@@ -111,7 +111,7 @@ How It Works:
 •	If multiple files are listed, the server tries them in order until it finds one that exists.
 •	If no welcome file is found, the server may display a directory listing or return an error.
 
-6. Describe the process of creating a connection object.
+=6. Describe the process of creating a connection object.
 In JDBC (Java Database Connectivity), a Connection object is used to establish a link between a Java application and a database. It enables sending SQL commands to the database and receiving result
 1.	Import JDBC Packages: Import the required classes from the java.sql package to use JDBC interfaces and classes.
 2.	Load and Register JDBC Driver : Load the database-specific JDBC driver class to register it with the DriverManager. This step enables the Java application to communicate with the database.
@@ -122,3 +122,22 @@ In JDBC (Java Database Connectivity), a Connection object is used to establish a
 6.	Process the ResultSet : Iterate over the ResultSet to retrieve and process the data returned by the query.
 7.	Close the Connection: Close the ResultSet, Statement, and Connection objects to free resources and avoid memory leaks.
  
+=7. Describe the advantages of using PreparedStatement in Java
+A PreparedStatement in JDBC is a precompiled SQL statement that offers several advantages over a regular Statement object. It is used to execute parameterized queries efficiently and securely.
+Prevention of SQL Injection:
+•	PreparedStatement uses parameterized queries, where placeholders (?) are used instead of directly embedding user input in the SQL query. This prevents malicious SQL code (SQL injection) from being executed, enhancing security.
+•	Example: Instead of concatenating user input, PreparedStatement safely binds values, ensuring the database treats them as data, not executable code.
+Improved Performance for Repeated Queries:
+•	The SQL query in a PreparedStatement is precompiled by the database once and cached, allowing reuse with different parameter values. This reduces compilation overhead, making it faster for repeated executions (e.g., in batch processing or loops).
+•	In contrast, a Statement compiles the query each time it is executed.
+Better Handling of Parameters:
+•	PreparedStatement provides type-safe methods (e.g., setString(), setInt(), setDate()) to bind parameters to placeholders, reducing errors caused by incorrect data types or formatting.
+•	It automatically handles special characters (e.g., quotes) in strings, simplifying query construction.
+Support for Null Values:
+•	PreparedStatement allows explicit setting of null values using setNull(index, sqlType), ensuring proper handling of null for different database column types (e.g., Types.VARCHAR, Types.INTEGER).
+•	This is more reliable than manually handling null in a Statement.
+Readability and Maintainability:
+•	Queries in PreparedStatement are clearer because placeholders separate the SQL logic from parameter values, making the code easier to read and maintain.
+•	This is especially useful for complex queries with multiple parameters.
+Support for Batch Processing:
+•	PreparedStatement supports batch execution (using addBatch() and executeBatch()), allowing multiple queries to be executed in a single database call, improving performance for bulk operations.
