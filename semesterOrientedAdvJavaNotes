@@ -110,3 +110,15 @@ How It Works:
 •	When a user visits http://example.com/app/, the server checks the <welcome-file-list> to find the default page.
 •	If multiple files are listed, the server tries them in order until it finds one that exists.
 •	If no welcome file is found, the server may display a directory listing or return an error.
+
+6. Describe the process of creating a connection object.
+In JDBC (Java Database Connectivity), a Connection object is used to establish a link between a Java application and a database. It enables sending SQL commands to the database and receiving result
+1.	Import JDBC Packages: Import the required classes from the java.sql package to use JDBC interfaces and classes.
+2.	Load and Register JDBC Driver : Load the database-specific JDBC driver class to register it with the DriverManager. This step enables the Java application to communicate with the database.
+3.	Open a Connection to Database: Use DriverManager.getConnection() with the database URL, username, and password to establish a physical connection to the database. This returns a Connection object.
+4.	Create a Statement Object to Perform a Query: Create a Statement object from the Connection to send SQL commands to the database.
+5.	Execute the Statement Object and Return a Query ResultSet: Execute SQL queries using the Statement object (e.g., executeQuery() for SELECT). This returns a ResultSet containing the query results.
+
+6.	Process the ResultSet : Iterate over the ResultSet to retrieve and process the data returned by the query.
+7.	Close the Connection: Close the ResultSet, Statement, and Connection objects to free resources and avoid memory leaks.
+ 
