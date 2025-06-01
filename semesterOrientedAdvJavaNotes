@@ -141,3 +141,18 @@ Readability and Maintainability:
 •	This is especially useful for complex queries with multiple parameters.
 Support for Batch Processing:
 •	PreparedStatement supports batch execution (using addBatch() and executeBatch()), allowing multiple queries to be executed in a single database call, improving performance for bulk operations.
+
+=8. Discuss the concept of servlet how it gets access to its init parameters
+A servlet is a Java program that runs on a web server and acts as a middle layer between client requests (usually from a web browser) and server responses. Servlets are used to create dynamic web applications, process user requests, interact with databases, and generate responses in formats like HTML, JSON, or XML. They follow a specific lifecycle managed by the servlet container, which includes loading, initialization, request handling, and destruction.
+Init parameters are configuration values defined outside the servlet code that are used to initialize a servlet during startup. They help make a servlet more flexible and configurable.
+Servlet init parameters are configuration values specified for a servlet in the deployment descriptor (web.xml) or via annotations. These parameters are used to provide servlet-specific configuration data, such as database connection details, file paths, or any other information needed during the servlet’s initialization
+1. Defining Init Parameters in web.xml
+ 
+
+
+2. Retrieving Init Parameters in a Servlet
+The ServletConfig interface allows access to init parameters via getInitParameter().
+ 
+3. Using Annotations (@WebServlet) for Init Parameters
+Instead of web.xml, init parameters can be set using annotations.
+ 
