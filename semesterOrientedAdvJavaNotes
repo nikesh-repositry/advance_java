@@ -237,4 +237,24 @@ Characteristics:
 •	More resource-intensive due to dynamic updates.
 Use Case: Suitable for applications needing real-time updates to the result set, such as interactive data grids.
  
+=12. List advantages and disadvantages of Servlets
+Advantages of Servlets
+•	High Performance: Servlets are faster than traditional CGI scripts because they use threads to handle multiple requests within a single process, avoiding the overhead of creating a new process for each request.
+•	Platform Independence: Servlets are written in Java, making them portable across different operating systems and web servers that support Java.
+•	Robustness and Security: Servlets inherit Java’s features such as exception handling, garbage collection, memory management, and built-in security, making them reliable and safe for web development.
+•	Scalability: Servlets can efficiently handle multiple, simultaneous client requests using multi-threading, making them suitable for large-scale web applications.
+•	Reusability and Modularity: Servlets promote code reusability and modularity, as they can be easily managed, updated, and reused across different applications.
+•	Easy Integration: Servlets can communicate with other servlets, JavaBeans, databases, and external applications, enabling strong integration with enterprise systems.
+•	Session Management: Servlets provide their own API for maintaining sessions, which is essential for web applications that require user tracking.
+•	Efficient Resource Management: Only one instance of a servlet is loaded into memory, with each client request handled by a separate thread, reducing memory usage and improving management of persistent data.
+
+Disadvantages of Servlets
+•	Complexity in Design: Writing and designing servlets can be complex, especially when mixing HTML with Java code, making the code bulky and harder to maintain.
+•	Difficult to Modify: Any change in the servlet code requires recompiling, reloading, and restarting the servlet container, which can be time-consuming.
+•	Challenging for Beginners: Servlets require a good understanding of Java and web technologies, making them less suitable for novice programmers.
+•	Separation of Concerns: Mixing business logic with presentation (HTML) in servlets can lead to less maintainable code compared to technologies like JSP, which separate logic from presentation.
+•	Environment Dependency: Servlets require a Java Runtime Environment (JRE) on the server, which may not be available or desired in all hosting environments.
+•	State Management Overhead: Managing state (sessions, cookies) in servlets can add complexity, as HTTP is a stateless protocol and developers must handle session management explicitly.
+
+
 
