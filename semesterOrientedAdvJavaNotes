@@ -256,5 +256,21 @@ Disadvantages of Servlets
 •	Environment Dependency: Servlets require a Java Runtime Environment (JRE) on the server, which may not be available or desired in all hosting environments.
 •	State Management Overhead: Managing state (sessions, cookies) in servlets can add complexity, as HTTP is a stateless protocol and developers must handle session management explicitly.
 
+=13. Describe all the life-cycle methods for a servlet
+The life-cycle of a servlet is managed by the servlet container and consists of several well-defined phases, each associated with specific methods. These methods ensure the servlet is properly initialized, can handle client requests, and is eventually cleaned up before removal. The main life-cycle methods are init(), service(), and destroy()
+1. init() Method
+Purpose: The init() method is called once when the servlet is first loaded into memory by the servlet container, either at server startup or when the servlet is accessed for the first time.
+Function: It is used for initialization tasks, such as setting up database connections, reading configuration parameters, or allocating resources needed during the servlet’s operation.
+Characteristics: This method is called only once in the servlet’s life-cycle and is guaranteed to complete before any requests are handled.
+
+2. service() Method
+Purpose: The service() method is invoked by the servlet container for every client request directed to the servlet.
+Function: It receives ServletRequest and ServletResponse objects, processes the request, and generates a response. In generic servlets, you override service() directly, but in HTTP servlets, the service() method dispatches requests to specific methods like doGet(), doPost(), doPut(), etc., based on the HTTP request type.
+Characteristics: This method can be called multiple times—once for each request—throughout the servlet’s life.
+
+3. destroy() Method
+Purpose: The destroy() method is called once just before the servlet is removed from service (such as during server shutdown or servlet reloading).
+Function: It is used for cleanup activities, such as closing database connections, releasing resources, or saving state.
+Characteristics: Like init(), this method is called only once in the servlet’s life-cycle
 
 
