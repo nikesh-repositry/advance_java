@@ -195,4 +195,46 @@ The Statement interface is the most basic form of executing SQL statements in JD
 To address these limitations, JDBC provides the PreparedStatement interface, which is used for executing precompiled SQL statements with or without parameters. PreparedStatements are created using the prepareStatement() method of the Connection object, where the SQL query can include placeholders (?) for parameters. These parameters are set using setter methods like setInt(), setString(), etc. The main advantage of PreparedStatement is that the SQL statement is compiled only once and can be executed multiple times with different parameter values, leading to better performance. Moreover, PreparedStatement automatically escapes parameter values, making it much safer against SQL injection attacks. This makes it the preferred choice for executing dynamic queries, especially those involving user input or repeated execution.
  
 The third type, CallableStatement, is designed for executing stored procedures in the database. Stored procedures are pre-written SQL routines stored in the database, often used to encapsulate complex business logic or batch operations. CallableStatement objects are created using the prepareCall() method of the Connection object, and the SQL syntax typically uses curly braces to indicate a procedure call (e.g., {call procedureName(?, ?)}). CallableStatement supports input, output, and input-output parameters, which can be set and retrieved using methods like setInt(), registerOutParameter(), and getInt(). This makes CallableStatement ideal for interacting with advanced database features, such as retrieving computed values or handling multiple result sets.
+
+=11. Explain ResultSet. Discuss all the types of ResultSet with example.
+A ResultSet is a Java interface in the java.sql package that represents the result of an SQL SELECT query executed against a database. It provides methods to retrieve and manipulate data from the database in a tabular format, where each row represents a record and each column represents a field. The ResultSet maintains a cursor pointing to the current row of data, which can be navigated using methods like next(), previous(), or absolute(). It is typically obtained by executing a query using a Statement or PreparedStatement.
+There are three different characteristics by which ResultSet types are differentiated
+
+1.Scrollability: Determines whether you can move back and forth in the ResultSet
+TYPE_FORWARD_ONLY: Can only move forward through the rows
+TYPE_SCROLL_INSENSITIVE: Can move forward and backward but changes are not reflect ResultSet
+TYPE_SCROLL_SENSITIVE: Can move forward and backward but changes are affect the ResultSet
+	
+2.Concurrency: Determines whether you can update the ResultSet
+CONCUR_READ_ONLY: Can only read data
+CONCUR_UPDATABLE: Allows updates to the ResultSet
+Holdability: Determines what happens to the ResultSet when a 
+
+3.Transaction is committed.
+HOLD_CURSORS_OVER_COMMIT: The ResultSet remains open after a commit
+CLOSE_CURSORS_AT_COMMIT: The ResultSet closes after a commit
+TYPE_FORWARD_ONLY (Default):
+Description: The cursor can only move forward through the result set (using next()). It is the default type and is optimized for simple, read-only queries.
+Characteristics:
+•	Fastest and least resource-intensive.
+•	Cannot move backward or jump to specific rows.
+•	Typically read-only (unless explicitly set to updatable).
+Use Case: Suitable for one-time sequential processing of query results.
  
+TYPE_SCROLL_INSENSITIVE:
+Description: The cursor can move forward (next()), backward (previous()), or to specific rows (absolute(), relative()). Changes made to the underlying database after the ResultSet is created are not reflected.
+Characteristics:
+•	Scrollable in both directions.
+•	Insensitive to database updates (static snapshot of data).
+•	Read-only or updatable based on concurrency setting.
+Use Case: Useful for applications requiring navigation through results without reflecting concurrent database changes.
+ 
+TYPE_SCROLL_SENSITIVE:
+Description: Similar to TYPE_SCROLL_INSENSITIVE, but the ResultSet reflects changes (e.g., updates, deletes) made to the underlying database while the result set is open, depending on the database’s support.
+Characteristics:
+•	Scrollable in both directions.
+•	Sensitive to database changes (if supported by the database).
+•	More resource-intensive due to dynamic updates.
+Use Case: Suitable for applications needing real-time updates to the result set, such as interactive data grids.
+ 
+
