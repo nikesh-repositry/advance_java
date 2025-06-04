@@ -308,3 +308,38 @@ When servlet container shuts down, it unloads all the servlets and calls destroy
 
 
                                                10 MARKERS
+
+
+=15. Explain the method of calling one Servlet from another Servlet. Explain using  example.
+In a Java web application, a servlet can call another servlet to delegate tasks, share processing logic, or forward requests. This is typically achieved using request dispatching or redirecting. The two primary methods provided by the Servlet API are:
+	
+1.RequestDispatcher.forward():
+Description: Forwards the current request and response to another servlet (or resource, e.g., JSP) within the same web application. The client is unaware of the forwarding, as it happens server-side, and the original servlet’s response is discarded.
+Characteristics:
+•	Retains the original request URL in the client’s browser.
+•	Shares the same HttpServletRequest and HttpServletResponse objects.
+•	Suitable for internal processing where the second servlet completes the response.
+Use Case: When one servlet processes initial data and hands off to another for final output (e.g., a controller servlet forwarding to a view servlet).
+
+HttpServletResponse.sendRedirect():
+Description: Sends a redirect response to the client, instructing the browser to make a new request to the specified servlet (or URL). This is a client-side operation, resulting in a new HTTP request.
+Characteristics:
+•	Changes the URL in the client’s browser.
+•	Creates a new HttpServletRequest and HttpServletResponse for the target servlet.
+•	Can redirect to resources within or outside the web application.
+Use Case: When the client needs to be redirected to a different page or servlet (e.g., after form submission to a success page).
+
+
+
+
+
+
+FirstServlet: Calls the second servlet.
+SecondServlet: Processes the request forwarded by the first servlet.
+Firstservlet.java
+ 
+Secondservlet.java
+ 
+
+
+
