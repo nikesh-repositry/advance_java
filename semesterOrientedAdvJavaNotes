@@ -307,3 +307,4 @@ Following are the steps in which a request flows through a servlet which can be 
 When servlet container shuts down, it unloads all the servlets and calls destroy() method for each initialized servlet.
 
 
+                                               10 MARKERS
