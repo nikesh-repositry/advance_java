@@ -339,6 +339,24 @@ SecondServlet: Processes the request forwarded by the first servlet.
 Firstservlet.java
  
 Secondservlet.java
+
+=16. Describe the Servlet Class Hierarchy with proper diagram
+ 
+🔷 1. java.lang.Object
+At the top of the hierarchy lies the Object class, which is the parent of all Java classes. It provides basic methods such as toString(), equals(), and hashCode() that are inherited by every class in Java, including servlets. While this class doesn't contribute directly to servlet functionalities, it is fundamental because it ensures that servlet classes inherit core Java capabilities.
+
+🔷 2. javax.servlet.Servlet (Interface)
+The Servlet interface is the foundation of the servlet API, defining the lifecycle of a servlet. It declares five essential methods: init(), service(), destroy(), getServletConfig(), and getServletInfo(). Every servlet must implement this interface either directly or indirectly. These methods allow a servlet to be initialized, handle client requests, provide information, and be destroyed by the container. Thus, this interface establishes the core structure every servlet must follow.
+
+🔷 3. javax.servlet.GenericServlet (Abstract Class)
+The GenericServlet class is an abstract implementation of the Servlet interface. It provides default implementations of most methods in the Servlet interface, except the service() method, which must be defined by subclasses. It also adds convenience methods like getServletContext() and getInitParameter() to access configuration and context information. This class is protocol-independent, meaning it can be used for non-HTTP servlets, though in practice, it is mostly extended through its subclass HttpServlet.
+
+🔷 4. javax.servlet.http.HttpServlet (Concrete Class)
+The HttpServlet class extends GenericServlet and is a fully implemented class designed for handling HTTP requests. It simplifies servlet development by providing methods corresponding to HTTP verbs such as doGet(), doPost(), doPut(), doDelete(), etc. Developers only need to override these methods to define how their servlet should respond to different types of HTTP requests. It is the most commonly used class in servlet development as most web applications communicate over the HTTP protocol.
+
+🔷 5. User-Defined Servlet Class
+At the final level, the developer creates a custom servlet class by extending the HttpServlet class. In this class, specific logic is written by overriding methods like doGet() and doPost() to generate dynamic responses based on client requests. This level represents the actual working servlet in a web application. By relying on the classes and interfaces above it, the user-defined servlet benefits from standardized request handling and a managed lifecycle.
+
  
 
 
