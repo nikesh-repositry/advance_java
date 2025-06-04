@@ -273,4 +273,37 @@ Purpose: The destroy() method is called once just before the servlet is removed 
 Function: It is used for cleanup activities, such as closing database connections, releasing resources, or saving state.
 Characteristics: Like init(), this method is called only once in the servlet’s life-cycle
 
+=14. Explain the Servlet Architecture
+ 
+1. Client
+The client shown in the architecture above is the web browser and it primarily works as a medium that sends out HTTP requests over to the web server and the web server generates a response based on some processing in the servlet and the client further processes the response.
+
+2. Web Server
+Primary job of a web server is to process the requests and responses that a user sends over time and maintain how a web user would be able to access the files that has been hosted over the server. The server we are talking about here is a software which manages access to a centralized resource or service in a network. There are precisely two types of webservers:
+
+•	Static web server
+•	Dynamic web server
+
+3. Web Container
+Web container is another typical component in servlet architecture which is responsible for communicating with the servlets. Two prime tasks of a web container are:
+•	Managing the servlet lifecycle
+•	URL mapping
+Web container sits at the server-side managing and handling all the requests that are coming in either from the servlets or from some JSP pages or potentially any other file system.
+How does a Servlet Request flow?
+Every servlet should override the following 3 methods namely:
+•	init(): To initalize/instantiate the servlet container.
+•	service(): This method acts like an intermediatory between the HTTP request and the business logic to serve that particular request.
+•	destroy(): This method is used to deallocate the memory allocated to the servlet.
+These methods are used to process the request from the user.
+Following are the steps in which a request flows through a servlet which can be observed in the architecture diagram:
+•	The client sends over a request.
+•	The request is accepted by the web server and forwarded to the web container.
+•	In order to obtain the servlet's address, the web container traces web.xml file corresponding to the request URL pattern.
+•	By the time above process takes place, the servlet should have been instantiated and initialized. The init() method is invoked to initialize the servlet.
+•	By passing ServletRequest and Response object, public service() method is called by the container.
+•	In the next step, the ServletRequest and ServletResponse objects are type casted to HttpServletRequest and HttpServletResponse objects by the public service() method.
+•	Now protected service() method is called by the public service() method.
+•	The protected service() method dispatches the request to the correct handler method based on the type of request.
+When servlet container shuts down, it unloads all the servlets and calls destroy() method for each initialized servlet.
+
 
