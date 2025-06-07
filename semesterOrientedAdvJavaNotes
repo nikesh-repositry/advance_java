@@ -363,3 +363,23 @@ The GenericServlet class is an abstract class in the Servlet API that provides b
 To create a servlet using GenericServlet, you extend the class and implement the service() method. This method receives ServletRequest and ServletResponse objects, which you use to process the request and generate a response.
 
 =18. Describe the procedure to connect MySQL or Oracle with Java
+1. Import JDBC Packages
+To use JDBC, import the necessary classes from java.sql package.
+ 2. Load and Register the JDBC Driver
+This step loads the database-specific driver into memory.
+MySQL Driver: com.mysql.cj.jdbc.Driver
+Oracle Driver: oracle.jdbc.driver.OracleDriver
+3. Establish a Connection to the Database
+Use the DriverManager.getConnection() method by specifying:
+Database URL
+Username
+Password
+4. Create a Statement Object
+The Statement or PreparedStatement object is used to send SQL queries to the database.
+5. Execute the Query
+Use executeQuery() for SELECT statements or executeUpdate() for INSERT, UPDATE, DELETE.
+6. Process the Result
+The data returned from the database is stored in a ResultSet object. You can loop through it to read records.
+ 7. Close the Connection
+It is important to close the ResultSet, Statement, and Connection to free up resources.
+
