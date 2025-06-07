@@ -359,5 +359,7 @@ At the final level, the developer creates a custom servlet class by extending th
 
  
 =17. Build a program that provide the GenericServlet class and its method implementation
+The GenericServlet class is an abstract class in the Servlet API that provides basic servlet functionality. It is protocol-independent, meaning it can be used for any type of request, not just HTTP.GenericServlet is an abstract class in the Java Servlet API, defined in the javax.servlet package. It simplifies the process of writing servlets by providing basic implementations for most of the methods in the Servlet and ServletConfig interfaces, except for the service() method, which remains abstract and must be implemented by subclasses
+To create a servlet using GenericServlet, you extend the class and implement the service() method. This method receives ServletRequest and ServletResponse objects, which you use to process the request and generate a response.
 
 
