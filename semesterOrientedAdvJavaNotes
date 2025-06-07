@@ -358,6 +358,6 @@ The HttpServlet class extends GenericServlet and is a fully implemented class de
 At the final level, the developer creates a custom servlet class by extending the HttpServlet class. In this class, specific logic is written by overriding methods like doGet() and doPost() to generate dynamic responses based on client requests. This level represents the actual working servlet in a web application. By relying on the classes and interfaces above it, the user-defined servlet benefits from standardized request handling and a managed lifecycle.
 
  
-
+=17. Build a program that provide the GenericServlet class and its method implementation
 
 
