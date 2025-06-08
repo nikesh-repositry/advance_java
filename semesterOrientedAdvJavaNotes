@@ -384,3 +384,4 @@ The data returned from the database is stored in a ResultSet object. You can loo
 It is important to close the ResultSet, Statement, and Connection to free up resources.
 
 =21. Distinguish between the following Servlet, Generic Servlet and HTTP Servlet.
+The Servlet, GenericServlet, and HttpServlet classes form the foundational hierarchy of Java web development, each serving a distinct conceptual role in the servlet architecture. At the top of this hierarchy is the Servlet interface (javax.servlet.Servlet), which defines the basic life-cycle methods (init(), service(), destroy(), getServletConfig(), and getServletInfo()) that any servlet must implement. This interface is protocol-agnostic and serves as the contract for all servlets, ensuring they can be managed by the servlet container regardless of the underlying communication protocol.
