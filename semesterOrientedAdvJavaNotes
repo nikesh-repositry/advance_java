@@ -383,3 +383,4 @@ The data returned from the database is stored in a ResultSet object. You can loo
  7. Close the Connection
 It is important to close the ResultSet, Statement, and Connection to free up resources.
 
+=21. Distinguish between the following Servlet, Generic Servlet and HTTP Servlet.
