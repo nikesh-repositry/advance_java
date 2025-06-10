@@ -394,3 +394,8 @@ The HttpServlet class (javax.servlet.http.HttpServlet) extends GenericServlet an
 Transaction management in JDBC is the process of controlling a set of database operations so that they are executed as a single unit, ensuring data integrity and consistency. A transaction is a group of operations that must either all succeed or all fail—if any operation in the group fails, the entire transaction is rolled back, leaving the database unchanged. This is crucial for maintaining data reliability, especially in scenarios like banking, ticket booking, or any application where multiple related changes must be treated as a single operation35.
 Why Do We Need Transaction Management?
 Transaction management is needed to ensure atomicity, consistency, isolation, and durability (ACID properties) in database operations:
+•	Atomicity: All operations in a transaction are completed; if not, none are applied.
+•	Consistency: The database remains in a consistent state before and after the transaction.
+•	Isolation: Transactions are isolated from each other, preventing concurrent issues.
+•	Durability: Once a transaction is committed, changes are permanent, even in case of a system failure.
+
