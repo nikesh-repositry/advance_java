@@ -398,4 +398,4 @@ Transaction management is needed to ensure atomicity, consistency, isolation, an
 •	Consistency: The database remains in a consistent state before and after the transaction.
 •	Isolation: Transactions are isolated from each other, preventing concurrent issues.
 •	Durability: Once a transaction is committed, changes are permanent, even in case of a system failure.
-
+For example, in an online ticket booking system, operations such as verifying seats, reserving seats, processing payment, and issuing tickets should all succeed for the booking to be completed. If any step fails (like payment), all previous steps must be undone to avoid inconsistencies like reserved seats without payment
