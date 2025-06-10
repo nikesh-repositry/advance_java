@@ -399,3 +399,23 @@ Transaction management is needed to ensure atomicity, consistency, isolation, an
 •	Isolation: Transactions are isolated from each other, preventing concurrent issues.
 •	Durability: Once a transaction is committed, changes are permanent, even in case of a system failure.
 For example, in an online ticket booking system, operations such as verifying seats, reserving seats, processing payment, and issuing tickets should all succeed for the booking to be completed. If any step fails (like payment), all previous steps must be undone to avoid inconsistencies like reserved seats without payment
+•	setAutoCommit(boolean autoCommit): Enables (true) or disables (false) auto-commit mode.
+•	commit(): Saves all changes made in the transaction to the database.
+•	rollback(): Undoes all changes made in the transaction if an error occurs.
+•	setSavepoint() and rollback(Savepoint): Allow partial rollback to a specific point in the transaction.
+•	
+Steps for Transaction Management in JDBC
+Disable Auto-Commit:
+•	By default, JDBC operates in auto-commit mode (setAutoCommit(true)), where each SQL statement is committed immediately.
+•	Disable auto-commit using conn.setAutoCommit(false) to group multiple operations into a single transaction.
+Execute SQL Statements:
+•	Use Statement or PreparedStatement to execute SQL operations (e.g., INSERT, UPDATE) within the transaction.
+Commit the Transaction:
+•	If all operations succeed, call conn.commit() to save changes permanently.
+Handle Errors and Rollback:
+•	If an error occurs, call conn.rollback() to undo all changes made in the transaction.
+•	Optionally, use savepoints (setSavepoint()) to roll back to a specific point within the transaction.
+
+Restore Auto-Commit and Close Resources:
+•	Re-enable auto-commit (conn.setAutoCommit(true)) if needed.
+•	Close the Connection and other resources (e.g., PreparedStatement) using try-with-resources or a finally block.
