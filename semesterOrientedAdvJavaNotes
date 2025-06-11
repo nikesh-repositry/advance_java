@@ -419,3 +419,32 @@ Handle Errors and Rollback:
 Restore Auto-Commit and Close Resources:
 •	Re-enable auto-commit (conn.setAutoCommit(true)) if needed.
 •	Close the Connection and other resources (e.g., PreparedStatement) using try-with-resources or a finally block.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------UNIT-II JSP
+JSP: Introduction,                    CODE 6 10 10 10 10
+Overview, 
+JSP Scriptlet Tag, 
+JSP expression Tag, 6
+JSP declaration Tag, 
+Life Cycle of JSP, 6 6
+JSP API, 
+Implicit Objects: 2 2 2 6
+JSP request,                            THEORY & ARCHITECTURE OF JSP 6 10
+JSP response, 
+JSP config, 
+JSP session, 
+JSP Application, 
+JSP Page Context; JSP Page, JSP Exception. 
