@@ -431,6 +431,19 @@ Update student marks based on student ID.
 Delete a student record.
 Display all student details.
 
+=25. Case Study:
+An e-commerce website requires a servlet-based user authentication system. Users should log in using their credentials, and the system should verify them against a database.
+	
+Programming Task:
+Create a servlet handling login authentication. The servlet should:
+
+Accept username and password from an HTML form.
+Validate credentials using JDBC.
+Maintain user session upon successful login.
+Redirect to a welcome page if login is successful.
+Display an error message if credentials are incorrect.
+
+
 
 
 
