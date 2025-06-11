@@ -420,6 +420,17 @@ Restore Auto-Commit and Close Resources:
 •	Re-enable auto-commit (conn.setAutoCommit(true)) if needed.
 •	Close the Connection and other resources (e.g., PreparedStatement) using try-with-resources or a finally block.
 
+=24 . Case Study:
+A university wants to manage student records efficiently. The system should allow inserting, updating, deleting, and retrieving student details.
+Programming Task:
+Develop a Java application that connects to a MySQL database using JDBC. Implement a menu-driven program allowing users to:
+
+Insert student records using PreparedStatement.
+Retrieve student details using a search function.
+Update student marks based on student ID.
+Delete a student record.
+Display all student details.
+
 
 
 
