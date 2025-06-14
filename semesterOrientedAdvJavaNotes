@@ -483,3 +483,11 @@ JSP config,
 JSP session, 
 JSP Application, 
 JSP Page Context; JSP Page, JSP Exception. 
+
+                                                                    =2 MARKERS
+=1. Discuss the purpose to use request Implicit Object in JSP
+The request implicit object in JSP is an instance of the HttpServletRequest class that is automatically created by the web container for every client request to a JSP page. Its main purpose is to provide easy access to all the information related to the client's HTTP request without requiring explicit object creation in the code.
+
+Key Purposes of Using the request Implicit Object in JSP:
+Retrieving Form Data:
+
