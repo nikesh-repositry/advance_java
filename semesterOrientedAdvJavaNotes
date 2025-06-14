@@ -501,5 +501,5 @@ You can set, get, or remove attributes in the request scope, which is useful for
 Session and Context Integration:
 The request object can interact with session and application objects, enabling more complex web application logic.
 
-=2
+=2. Explain the role of a JSP container in the execution of JSP pages
 
