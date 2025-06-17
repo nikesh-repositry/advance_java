@@ -43,7 +43,7 @@ Four types of jdbc drivers:
 Type 1: JDBC-ODBC Bridge Driver:
 Uses ODBC (Open Database Connectivity) to connect to databases.
 How It Works: Translates JDBC calls to ODBC, which then interacts with the database.
-Pros: Works with any ODBC-compatible database.
+Pros: Works with any ODBC-compatible database. 
 Cons:
 Requires ODBC setup on the client machine.
 Poor performance due to multiple layers.
