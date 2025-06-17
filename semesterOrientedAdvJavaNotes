@@ -345,7 +345,7 @@ Secondservlet.java
 🔷 1. java.lang.Object
 At the top of the hierarchy lies the Object class, which is the parent of all Java classes. It provides basic methods such as toString(), equals(), and hashCode() that are inherited by every class in Java, including servlets. While this class doesn't contribute directly to servlet functionalities, it is fundamental because it ensures that servlet classes inherit core Java capabilities.
 
-🔷 2. javax.servlet.Servlet (Interface)
+🔷 2. javax.servlet.Servlet (Interface) 
 The Servlet interface is the foundation of the servlet API, defining the lifecycle of a servlet. It declares five essential methods: init(), service(), destroy(), getServletConfig(), and getServletInfo(). Every servlet must implement this interface either directly or indirectly. These methods allow a servlet to be initialized, handle client requests, provide information, and be destroyed by the container. Thus, this interface establishes the core structure every servlet must follow.
 
 🔷 3. javax.servlet.GenericServlet (Abstract Class)
