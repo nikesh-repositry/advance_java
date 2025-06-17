@@ -3,7 +3,7 @@ UNIT-I Introduction JDBC: Introduction, JDBC Driver, DB Connectivity, Driver Man
 
 UNIT-II JSP JSP: Introduction, Overview, JSP Scriptlet Tag, JSP expression Tag, JSP declaration Tag, Life Cycle of JSP, JSP API, Implicit Objects: JSP request, JSP response, JSP config, JSP session, JSP Application, JSP Page Context; JSP Page, JSP Exception. 
 
-UNIT-III Spring 5.0 Spring 5.0: Spring Core Introduction and Overview, Managing Beans, The Spring Container, The Factory Pattern, Dependency Injection (DI), Spring Managed Bean Lifecycle, Constructor Injection, Metadata/Configuration: Life Cycle Annotations, Java Configuration, XML Free configuration. 
+UNIT-III Spring 5.0 Spring 5.0: Spring Core Introduction and Overview, Managing Beans, The Spring Container, The Factory Pattern, Dependency Injection (DI), Spring Managed Bean Lifecycle, Constructor Injection, Metadata/Configuration: Life Cycle Annotations, Java Configuration, XML Free configuration.  
 
 UNIT-IV Spring MVC & Spring Boot Spring MVC: Introduction/Developing Web Application with Spring MVC, Advanced Techniques, Spring Controllers Spring Boot: Spring Boot Starters, CLI, Application Class, Logging, Auto Configuration Classes, Spring Boot dependencies, Spring data JPA introduction and Overview. 
 
