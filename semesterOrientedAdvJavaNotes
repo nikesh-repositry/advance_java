@@ -561,3 +561,26 @@ Refers to the current instance of the JSP page's servlet (similar to this in Jav
 9.	exception (java.lang.Throwable)
 Used to handle exceptions; available only on JSP pages with isErrorPage="true"123567.
 
+=6 MARKERS
+5. Explain the purpose and key features of the session Implicit Object in JSP development, and provide an example of how it can be used to store and retrieve session data.
+The session implicit object in JSP is a built-in object of type HttpSession that allows developers to track and manage user-specific data across multiple requests during a user's session on a web application1234. This object is automatically available in every JSP page (unless explicitly disabled) and is essential for maintaining state in stateless HTTP communications.
+________________________________________
+Purpose of the session Implicit Object
+•	State Management:
+The primary purpose is to store and retrieve user data (such as login credentials, preferences, or shopping cart items) that should persist across multiple pages and requests until the session ends1356.
+•	User Identification:
+It helps uniquely identify a user during their interaction with the web application by assigning a unique session ID23.
+•	Data Sharing Across Pages:
+Data stored in the session object can be accessed from any JSP page within the same session, enabling seamless navigation and personalized experiences46.
+•	Session Control:
+The session object provides methods to manage session lifecycle, such as invalidating a session or checking if a session is new23.
+________________________________________
+Key Features
+•	Automatic Availability: No need to create or initialize; it’s provided by the JSP container13.
+•	Attribute Storage: Use setAttribute(String name, Object value) and getAttribute(String name) to store and retrieve objects235.
+•	Session Information: Methods like getId(), getCreationTime(), and getLastAccessedTime() provide session metadata23.
+•	Session Invalidation: End a session using invalidate() when the user logs out or the session should be cleared23.
+•	Scope: Data persists as long as the session is active and is accessible across all JSP pages in that session67.
+ 
+When a user logs in, their username is stored in the session using setAttribute.
+On any subsequent JSP page, the username can be retrieved using getAttribute, allowing personalized greetings or access control
