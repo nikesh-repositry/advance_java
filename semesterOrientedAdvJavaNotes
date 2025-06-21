@@ -528,3 +528,5 @@ JSP Container Execution Flow
 5.	service() method processes the request and generates a response.
 6.	HTML response is sent back to the user
 
+=3. Demonstrate the concepts of session Implicit Object in JSP
+
