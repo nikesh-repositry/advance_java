@@ -520,4 +520,11 @@ The request object can interact with session and application objects, enabling m
 •  Session and State Management
 •	Manages user sessions, cookies, and stored data.
 •	Ensures consistent user experience.
+JSP Container Execution Flow
+1.	User requests a JSP page → http://example.com/index.jsp.
+2.	JSP Container translates the page into a servlet (index_jsp.java).
+3.	Servlet is compiled into a .class file.
+4.	Container loads and initializes the servlet.
+5.	service() method processes the request and generates a response.
+6.	HTML response is sent back to the user
 
