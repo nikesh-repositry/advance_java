@@ -542,4 +542,22 @@ The method session.removeAttribute(String name) removes an attribute from the se
 Methods like getId(), getCreationTime(), getLastAccessedTime(), and isNew() provide details about the session itself125.
 
 =4. List various types of Implicit Objects in JSP
+1.	request (javax.servlet.http.HttpServletRequest)
+Represents the client's request and provides methods to retrieve request parameters, headers, and attributes.
+2.	response (javax.servlet.http.HttpServletResponse)
+Used to formulate and send responses back to the client, including setting headers and cookies.
+3.	out (javax.servlet.jsp.JspWriter)
+Used to send output (such as HTML) to the client browser.
+4.	session (javax.servlet.http.HttpSession)
+Maintains user-specific data across multiple requests during a session.
+5.	application (javax.servlet.ServletContext)
+Allows sharing of information and resources across the entire web application.
+6.	config (javax.servlet.ServletConfig)
+Provides configuration information for the JSP page’s servlet.
+7.	pageContext (javax.servlet.jsp.PageContext)
+Provides access to various scoped attributes (page, request, session, application) and other implicit objects.
+8.	page (java.lang.Object)
+Refers to the current instance of the JSP page's servlet (similar to this in Java).
+9.	exception (java.lang.Throwable)
+Used to handle exceptions; available only on JSP pages with isErrorPage="true"123567.
 
