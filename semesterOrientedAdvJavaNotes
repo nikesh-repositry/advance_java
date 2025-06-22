@@ -659,3 +659,45 @@ It is invoked by the JSP container for each client request. This method passes t
 jspDestroy()
 This is used for shutting down the application/container. This method is called only once in the complete JSP lifecycle when JSP is unloaded from the memory. This method should be overridden only to release resources created in the JSP init method.
 
+=9. Explain the three types of JSP tags and their purpose in JSP development
+In JSP (JavaServer Pages) development, there are three main types of JSP tags—Directive Tags, Scripting Tags, and Action Tags—each serving a specific purpose in building dynamic web applications.
+
+1. Directive Tags
+Purpose:
+Directive tags provide instructions to the JSP container about the overall structure and behavior of the JSP page. They are used to set page-level settings, include other files, or declare custom tag libraries.
+
+Examples & Usage:
+
+•	Page Directive: Sets page attributes like language, content type, or error page.
+<%@ page language="java" contentType="text/html" %>
+•	Include Directive: Includes content of another file during the translation phase.
+<%@ include file="header.jsp" %>
+•	Taglib Directive: Declares a custom tag library for use in the page.
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+
+2. Scripting Tags
+Purpose:
+Scripting tags allow embedding Java code directly into the JSP page. They are used to declare variables, write logic, and output dynamic content. However, their use is discouraged in modern JSP development in favor of tag libraries for better separation of concerns.
+
+Types & Examples:
+•	Declaration Tag: Declares variables or methods.
+<%! int count = 0; %>
+•	Scriptlet Tag: Contains Java code to be executed.
+<% count++; %>
+•	Expression Tag: Outputs the result of a Java expression.
+<%= count %>
+3. Action Tags
+Purpose:
+Action tags are special XML-like tags that instruct the JSP container to perform specific server-side actions, such as including resources, forwarding requests, or working with JavaBeans. They help manage dynamic behavior in a structured and reusable way. 
+Examples & Usage:
+
+•	Include Action: Includes another resource at request time.
+<jsp:include page="footer.jsp" />
+
+•	Forward Action: Forwards the request to another resource.
+<jsp:forward page="login.jsp" />
+•	JavaBean Actions: Work with JavaBeans for data storage and retrieval.
+<jsp:useBean id="user" class="com.example.User" scope="session" />
+<jsp:setProperty name="user" property="username" value="John" />
+<jsp:getProperty name="user" property="username" />
