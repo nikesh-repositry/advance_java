@@ -701,3 +701,17 @@ Examples & Usage:
 <jsp:useBean id="user" class="com.example.User" scope="session" />
 <jsp:setProperty name="user" property="username" value="John" />
 <jsp:getProperty name="user" property="username" />
+
+=10. Discuss the purpose and syntax of JSP scriptlet tags, and provide an example of how they can be used
+The JSP scriptlet tag (<% ... %>) allows you to insert Java code into a JSP page for dynamic content generation, logic, and interaction with HTML. It is executed on each request, making it a key tool for server-side programming in JSP
+Purpose of JSP Scriptlet Tags
+•	Dynamic Content Generation: Scriptlet tags enable you to write Java code that can manipulate data, perform calculations, or control the flow of the page based on conditions or loops156.
+•	Request-Time Execution: The code inside scriptlet tags is placed into the _jspService() method of the generated servlet, so it executes for every client request58.
+•	Integration with HTML: Scriptlets allow seamless integration of Java code with HTML, enabling the creation of interactive and data-driven web pages8.
+
+
+SYNTAX= <%     //JAVA HERE     %>
+You can write any number of valid Java statements inside these tags.
+
+Statements should end with a semicolon, as in regular Java code
+ 
