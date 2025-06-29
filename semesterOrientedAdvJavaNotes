@@ -716,3 +716,18 @@ You can write any number of valid Java statements inside these tags.
 Statements should end with a semicolon, as in regular Java code
  
 =11. Builda JSP program to retrieve data from HTML into JSP page and display on browser
+
+=12. Demonstrate the purpose and syntax of JSP expression tags, and provide an example of how they can be used.
+JSP expression tags (<%= %>) are a type of scripting element in JavaServer Pages (JSP) used to evaluate a Java expression and output its result directly into the HTML response sent to the client’s browser
+Key Purposes:  It is equivalent to out.print(Java_expression) in a scriptlet.
+•	Display Dynamic Content: Output the result of a Java expression (e.g., a variable, method call, or arithmetic operation) as a string in the generated HTML.
+•	Simplify Code: Provide a concise way to embed dynamic data in HTML, improving readability compared to scriptlets.
+•	Integration with JSP: Work seamlessly with other JSP components (e.g., request object, JavaBeans) to present processed data.
+•	Avoid Explicit Output: Eliminate the need for out.println() statements, as the expression’s result is automatically written to the response.
+Syntax of JSP Expression Tags
+•	Format: <%= Java_expression %> 
+o	The Java_expression is a valid Java expression that evaluates to a value (e.g., a variable, method call, or operation).
+o	The result is converted to a string and inserted into the HTML output.
+o	No semicolon (;) is used at the end of the expression, as it is not a statement but an expression.
+ 
+
