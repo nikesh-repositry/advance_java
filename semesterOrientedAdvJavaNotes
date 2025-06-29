@@ -715,3 +715,4 @@ You can write any number of valid Java statements inside these tags.
 
 Statements should end with a semicolon, as in regular Java code
  
+=11. Builda JSP program to retrieve data from HTML into JSP page and display on browser
