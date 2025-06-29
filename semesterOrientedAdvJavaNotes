@@ -745,3 +745,40 @@ The compiler checks the translated servlet code for any errors. If errors are fo
 If the code is correct, the compiler generates a .class file containing Java bytecode. This bytecode is platform-independent and can be executed by any server running a JVM12458.
 •	Execution Readiness:
 Once compiled, the servlet class is ready to be loaded, instantiated, and initialized by the web container, so it can handle client requests efficiently68.
+
+
+=14. Define the key features and advantages of using JSP in web development, and discuss how it compares to other web technologies such as Servlets and PHP
+JavaServer Pages (JSP) is a widely used server-side technology for developing dynamic web applications in Java. Below are its key features, advantages, and a comparison with Servlets and PHP:
+________________________________________
+Key Features of JSP
+•	Seamless Java-HTML Integration:
+JSP allows developers to embed Java code directly into HTML pages, making it easy to create dynamic content and interactive web applications134.
+•	Separation of Concerns:
+JSP promotes a clear division between presentation (HTML) and business logic (Java), simplifying maintenance and updates135.
+•	Predefined Objects:
+JSP provides implicit objects like request, response, session, and application, streamlining development and reducing boilerplate code13.
+•	Custom Tags and Tag Libraries:
+Supports custom tags and libraries (like JSTL), enabling reusable components and cleaner code36.
+•	Platform Independence:
+JSP is platform-independent—write once, run anywhere—leveraging the Java ecosystem13.
+•	Integration with Java EE:
+Easily integrates with Java EE technologies, JavaBeans, JDBC, and frameworks like Spring and Struts3.
+•	Automatic Error Handling:
+Built-in mechanisms for exception and error management enhance robustness3.
+•	Performance:
+JSP pages are compiled into servlets for efficient server-side execution, leading to fast response times and resource efficiency136.
+Advantages of JSP
+•	Easy Maintenance:
+The separation of UI and business logic makes JSP applications easier to maintain and update15.
+•	Reduced Coding Effort:
+Custom tags and tag libraries minimize code complexity and redundancy35.
+•	Fast Development Cycle:
+Modifying JSP pages does not require recompilation or redeployment of the entire application5.
+•	Reusability:
+Supports reusable components, making development faster and more modular36.
+•	Security:
+Built-in features help protect against common web vulnerabilities3.
+•	Scalability:
+Well-suited for applications with growing user bases due to its robust architecture13.
+•	Large Community and Ecosystem:
+Extensive libraries, tools, and community support are available for JSP development3.
