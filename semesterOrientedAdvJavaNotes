@@ -863,3 +863,19 @@ You can use it in a JSP page:
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <t:userInfo user="${currentUser}"/>
 
+Phase
+•	The container dynamically loads the compiled servlet class into memory, making it available for instantiation and execution15.
+4. Instantiation Phase
+•	The container creates an instance (object) of the servlet class.
+•	This instance will handle multiple client requests until the servlet is destroyed145.
+5. Initialization Phase
+•	The container calls the jspInit() method of the servlet instance.
+•	This method is executed only once and is used to initialize resources such as database connections or configuration settings14.
+6. Request Processing Phase
+•	For each client request, the container invokes the _jspService() method of the servlet instance.
+•	This method processes the request, generates dynamic content, and sends the response back to the client145.
+•	Developers cannot override _jspService() directly; it is managed by the container.
+7. Destruction Phase
+•	When the JSP page is no longer needed or the server is shutting down, the container calls the jspDestroy() method.
+•	This allows the servlet to release resources and perform cleanup before being removed from memory14.
+
