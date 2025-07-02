@@ -798,4 +798,68 @@ The servlet executes Java code, interacts with JavaBeans or databases if needed,
 The dynamically gene
 
 
-=
+=16. Explain the different categories of JSP tags - standard, custom, and Tag Files, and discuss the purpose and features of each category.
+1. Standard Tags
+Purpose:
+Standard tags are built-in tags provided by JSP and its libraries to perform common tasks such as iteration, conditionals, formatting, and database access. They help minimize the need for Java code within JSP pages, making code cleaner and more maintainable.
+
+Features:
+•	Provided as part of the JSP specification or standard tag libraries like JSTL (JavaServer Pages Standard Tag Library).
+•	Include tags for core operations, XML manipulation, internationalization, SQL, and functions.
+•	Promote portability and standardization across JSP containers.
+
+Examples:
+<c:forEach> for iteration
+<c:if> for conditional logic
+<c:out> for outputting values
+
+Sample Usage:
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:forEach var="item" items="${items}">
+  <c:out value="${item}"/><br>
+</c:forEach>
+
+2. Custom Tags
+Purpose:
+Custom tags allow developers to create their own tags for reusable functionality tailored to specific application needs. This helps encapsulate complex logic and promotes code reuse.
+
+Features:
+•	Defined by developers, typically using Java classes that implement the Tag interface or extend tag support classes.
+•	Packaged in tag libraries and referenced using the <%@ taglib %> directive.
+•	Can accept attributes and interact with the JSP page context.
+
+Examples:
+•	A custom <my:datePicker> tag for rendering a date picker UI component.
+•	Business logic encapsulated in a tag like <my:calculateTax>.
+Sample Usage:
+
+<%@ taglib prefix="my" uri="http://example.com/mytags" %>
+<my:datePicker name="dob"/>
+
+
+
+
+
+3. Tag Files
+Purpose:
+Tag files are reusable JSP fragments that define custom tags using JSP syntax instead of Java code. They simplify the creation of custom tags for developers who are more comfortable with JSP than Java.
+
+Features:
+•	Written as .tag files and stored in the /WEB-INF/tags/ directory of a web application.
+•	Allow rapid development and reuse of custom tags without writing Java classes.
+•	Can accept attributes and include logic, just like regular JSP pages.
+
+Examples:
+•	A tag file for rendering a formatted address block.
+•	A tag file for displaying user profile information.
+
+Sample Usage:
+Suppose you have a tag file /WEB-INF/tags/userInfo.tag:
+<!-- userInfo.tag -->
+<p>User: ${user.name}</p>
+<p>Email: ${user.email}</p>
+
+You can use it in a JSP page:
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<t:userInfo user="${currentUser}"/>
+
