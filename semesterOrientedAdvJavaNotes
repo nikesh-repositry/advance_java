@@ -782,3 +782,20 @@ Built-in features help protect against common web vulnerabilities3.
 Well-suited for applications with growing user bases due to its robust architecture13.
 •	Large Community and Ecosystem:
 Extensive libraries, tools, and community support are available for JSP development3.
+
+=15. Discuss the architecture of JSP, and explain how it works with web servers to generate dynamic web content.
+How JSP Works with Web Servers
+1.	Client Request:
+The user (client) sends an HTTP request for a page ending in .jsp from their browser.
+2.	JSP Engine/Container:
+The web server recognizes the request for a JSP page and forwards it to the JSP engine (for example, Apache Tomcat has a built-in JSP engine) 
+•	Translation: The JSP engine reads the JSP file and translates it into a Java servlet source file. All static template text (like HTML) is converted to output statements, and JSP elements (like scriptlets, expressions, and directives) are converted to Java code
+•	Compilation: The servlet source file is then compiled into a Java class (bytecode) by the server
+•	Loading and Execution: The compiled servlet class is loaded and executed by the servlet engine within the web server. If the JSP has not changed, the existing servlet is reused for efficiency
+3.	Dynamic Content Generation:
+The servlet executes Java code, interacts with JavaBeans or databases if needed, and generates dynamic HTML (or other content) as a response
+4.	Response to Client:
+The dynamically gene
+
+
+=
