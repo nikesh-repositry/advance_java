@@ -879,3 +879,34 @@ Phase
 •	When the JSP page is no longer needed or the server is shutting down, the container calls the jspDestroy() method.
 •	This allows the servlet to release resources and perform cleanup before being removed from memory14.
 
+
+CODES:
+1.18. Develop a JSP application that uses the various Implicit Objects available in JSP to create a simple online shopping cart. Your application should demonstrate the use of Implicit Objects such as request, response, pageContext, session, application, and out. Write a brief report on the steps you followed to create the application, including details on the Implicit Objects and how they are used to build web applications.
+
+2.19. Build a JSP application that uses the JSP standard tag library (JSTL) to implement database connectivity. Your application should use JSTL tags to connect to a database, retrieve data, and display the data on a JSP page. Write a brief report on the steps you followed to create the application, including details on the JSP API and how it relates to database connectivity using JSTL tags.
+
+3.20. Develop a JSP application that uses the JSP custom tag library to implement a simple login functionality. Your application should use the JSP custom tags to validate user input and redirect the user to a welcome page if the login is successful. Write a brief report on the steps you followed to create the application, including details on the JSP custom tag library and the JSP tag life cycle
+
+4.21. Build a JSP program to show and display at least 3 active control.
+
+
+5.22. Develop a JSP application that uses the JSP scriptlet tag to generate a dynamic HTML table of student data retrieved from a MySQL database. Your application should use JDBC to connect to the database and retrieve the data, and should use the JSP implicit object - out to write the table to the response stream. Write a brief report on the steps you followed to create the application, including details on the JSP life cycle, the JSP API used, and the database connectivity configuration.1.
+
+6.23. Build a simple JSP application that accepts user input via a form and displays the input back to the user. Your application should use the JSP expression tag to display the input and should also use the request implicit object to retrieve the user input data. Write a brief report on the steps you followed to create the application, including details on the JSP life cycle and the various JSP tags used in the application.
+
+7.24. An online shopping website needs a session-based cart system. Users should be able to add products to their cart, view selected items, and proceed to checkout.
+Programming Task:
+Create a servlet-based shopping cart system using HttpSession. The system should:
+
+Allow users to add or remove products.
+Store selected products in a session.
+Display the cart contents.
+Clear the session when the user checks out.
+
+8.25. Build a JSP application that uses the JSP include directive to include another JSP page. Your application should include a parent JSP page that contains the JSP include directive and a separate child JSP page that contains the content to be included. Write a brief report on the steps you followed to create the application, including details on the JSP life cycle and how the JSP include directive affects the processing of JSP pages.
+
+9.26. . Develop a JSP application that uses the various Implicit Objects available in JSP to create a simple online shopping cart. Your application should demonstrate the use of Implicit Objects such as request, response, pageContext, session, application, and out. Write a brief report on the steps you followed to create the application, including details on the Implicit Objects and how they are used to build web applications.
+
+
+https://github.com/copilot/share/423d1188-09a4-88f7-b051-6448e4ae495c----------------------------------------------link----------------------------------------------------
+
