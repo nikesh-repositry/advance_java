@@ -967,3 +967,19 @@ JdbcTemplate provides a convenient way to interact with relational databases, re
 Integration with Spring ORM
 Works well with Spring ORM modules, ensuring seamless integration with Hibernate and JPA-based data persistence.
 
+=3. Explain the term Bean Wiring
+Bean Wiring in Spring refers to the process of configuring dependencies between beans in a Spring application. It enables different components to be linked together automatically, allowing objects to be injected into one another without manual instantiation.
+
+
+=4. List some of the benefits of IoC.
+1. Reduced Coupling
+Objects are loosely coupled, meaning components are independent and can be modified without affecting other parts of the system.
+
+2. Increased Maintainability
+Since dependencies are injected externally, updating or replacing components becomes much easier.
+
+3. Simplified Unit Testing
+IoC makes testing seamless because mock dependencies can be injected without requiring complex setups.
+
+4. Improved Code Reusability
+Components are more modular, allowing them to be reused across different parts of an application.
