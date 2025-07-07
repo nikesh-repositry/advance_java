@@ -910,3 +910,60 @@ Clear the session when the user checks out.
 
 https://github.com/copilot/share/423d1188-09a4-88f7-b051-6448e4ae495c----------------------------------------------link----------------------------------------------------
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------UNIT-III Spring 5.0
+Spring 5.0: Spring Core Introduction and Overview, 
+Managing Beans,                             CODE 10 10 10
+The Spring Container,                           
+The Factory Pattern, 
+Dependency Injection (DI), 2 2	6
+Spring Managed Bean Lifecycle, 
+Constructor Injection, 6
+Metadata/Configuration: Life Cycle Annotations, 
+Java Configuration, 6
+XML Free configuration. 
+2 MARKERS
+
+=1. Discuss the benefits of using Spring Tool Suite.
+1. Enhanced Productivity
+STS provides a rich set of tools that streamline Spring development. It includes built-in templates, auto-configurations, and advanced code completion to speed up coding.
+
+2. Spring-Specific Features
+With dedicated support for Spring projects, STS offers features like Spring Boot dashboards, automatic application configuration, and integrated Spring Initializr, making it easy to create and manage Spring applications.
+
+3. Integrated Debugging & Runtime Monitoring
+STS helps developers debug Spring applications efficiently, with built-in runtime monitoring tools that provide insights into running applications.
+
+
+
+
+=2. Describe Spring DAO support
+Key Features of Spring DAO Support
+Consistent Exception Handling
+Spring provides DataAccessException, a hierarchy of exceptions that unifies error handling across various persistence frameworks.
+
+Simplified Transaction Management
+Spring DAO integrates seamlessly with Spring's declarative transaction management, making it easier to handle transactions without writing explicit commit and rollback logic.
+
+Support for Multiple Data Access Technologies
+Spring DAO works with JDBC, JPA, Hibernate, and other ORM frameworks, allowing flexibility in choosing the best approach for a project.
+
+JDBC Template for Simplified Database Access
+JdbcTemplate provides a convenient way to interact with relational databases, reducing boilerplate code and improving efficiency.
+Integration with Spring ORM
+Works well with Spring ORM modules, ensuring seamless integration with Hibernate and JPA-based data persistence.
+
