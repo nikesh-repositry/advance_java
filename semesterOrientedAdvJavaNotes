@@ -1003,3 +1003,19 @@ Spring supports various ways to define bean configurations: XML files, Java-base
 Environment-Specific Configuration
 Configuration files can be tailored for different environments (development, testing, production) using Spring profiles, allowing the application to load different bean definitions or property files based on the active profile. This enhances the application's adaptability across multiple deployment scenarios.
 
+=6. Discuss the different types of IoC (dependency injection)    
+Constructor-based Dependency Injection
+•	Dependencies are provided as arguments to a class constructor.
+•	This ensures that all required dependencies are supplied at the time of object creation, making the bean fully initialized and immutable.
+•	It is recommended for mandatory dependencies, as it makes the contract of required collaborators explicit and supports easier testing and immutability135.
+Setter-based Dependency Injection
+•	Dependencies are injected via public setter methods after the bean is instantiated.
+•	This allows for optional dependencies and provides flexibility to change dependencies after object creation.
+•	It is useful when some dependencies are optional or can be changed post-construction, but can lead to partially initialized beans if required dependencies are not set1235.
+Field-based Dependency Injection
+•	Dependencies are injected directly into fields using reflection, t d.
+•	This approach reduces boilerplate code and can look cleaner, but it hides dependencies, making code less transparent and harder to test.
+•	Field injection is generally discouraged in production code due to issues with testability and clarity, but it is sometimes used in test classes or for quick prototypes25.
+Method-based Dependency Injection
+•	Dependencies are injected through arbitrary methods (not just setters or constructors), allowing for more complex initialization logic.
+•	This approach is less commonly used but provides flexibility for advanced scenarios5
