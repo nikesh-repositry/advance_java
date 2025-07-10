@@ -1019,3 +1019,28 @@ Field-based Dependency Injection
 Method-based Dependency Injection
 •	Dependencies are injected through arbitrary methods (not just setters or constructors), allowing for more complex initialization logic.
 •	This approach is less commonly used but provides flexibility for advanced scenarios5
+
+=7. Differentiate between constructor injection and setter injection
+=8. Explain the JDBC be used more efficiently in the Spring framework.
+Efficient Use of JDBC in the Spring Framework
+Spring significantly improves the efficiency, maintainability, and safety of JDBC operations through its abstraction and utility classes, most notably JdbcTemplate.
+Key Ways JDBC is Used More Efficiently in Spring
+1. Resource Management and Error Handling
+•	Spring’s JdbcTemplate automatically manages the opening and closing of database resources (connections, statements, result sets), reducing boilerplate code and preventing resource leaks25.
+•	It translates checked SQLExceptions into a consistent, unchecked exception hierarchy, making error handling clearer and more robust2.
+2. Simplified Code and Focus on Business Logic
+•	With JdbcTemplate, developers only need to provide SQL and process results, while Spring handles the underlying JDBC workflow25.
+•	This allows you to focus on business logic rather than repetitive JDBC setup and teardown.
+3. Dependency Injection and Reusability
+•	Spring encourages configuring a shared DataSource bean and injecting it into DAOs, allowing for a single, thread-safe JdbcTemplate instance to be reused across the application23.
+•	This promotes modularity and easier testing.
+4. Use of Prepared Statements
+•	Spring’s JDBC support encourages the use of prepared statements (using ? placeholders), which improves performance, prevents SQL injection, and simplifies parameter binding51.
+5. Batch Operations and Transactions
+•	JdbcTemplate supports efficient batch updates and transaction management, allowing multiple statements to be executed as a unit for better performance and data integrity15.
+6. Handling Large Result Sets
+•	Spring allows you to set fetch size and process large result sets efficiently, reducing memory overhead and improving scalability1.
+7. Named Parameters
+•	NamedParameterJdbcTemplate lets you use named parameters in SQL queries, enhancing readability and maintainability, especially for queries with many parameters3.
+8. Exception Handling Best Practices
+•	Spring recommends catching specific exceptions like EmptyResultDataAccessException to handle cases where queries return no results, rather than running unnecessary additional queries6
