@@ -1044,3 +1044,23 @@ Key Ways JDBC is Used More Efficiently in Spring
 •	NamedParameterJdbcTemplate lets you use named parameters in SQL queries, enhancing readability and maintainability, especially for queries with many parameters3.
 8. Exception Handling Best Practices
 •	Spring recommends catching specific exceptions like EmptyResultDataAccessException to handle cases where queries return no results, rather than running unnecessary additional queries6
+
+========================================================================================10 MARKERS
+=9 Describe dispatcher Servlet. Explain the role of dispatcher servlet with example. 5
+The DispatcherServlet is a central component of the Spring MVC framework, acting as the front controller for web applications. It is responsible for handling all incoming HTTP requests, delegating them to appropriate handlers (controllers), and managing the overall request processing workflow1245.
+
+Role of DispatcherServlet
+•	Front Controller Pattern: DispatcherServlet implements the front controller design pattern, meaning all client requests are routed through it before reaching any business logic or view145.
+•	Request Handling: It receives HTTP requests and determines which controller should handle each request by consulting handler mappings124.
+•	Delegation: Once the appropriate controller is identified, DispatcherServlet delegates the request to that controller for processing.
+•	Model and View Management: After the controller processes the request, it returns a logical view name and a model (data to be displayed). DispatcherServlet then resolves the view name to an actual view (like a JSP) using a ViewResolver and passes the model data to it for rendering4.
+•	Exception Handling: It coordinates exception handling by delegating to configured exception resolvers.
+•	Flexible Workflow: The actual work is performed by configurable delegate components, making the workflow highly customizable1.
+Request Processing Flow
+1.	Client sends a request to the application (e.g., /app/home).
+2.	DispatcherServlet receives the request (as it is mapped to handle all or specific URL patterns).
+3.	HandlerMapping determines which controller method should handle the request based on the URL and HTTP method.
+4.	Controller processes the request and returns a ModelAndView (model data + logical view name).
+5.	ViewResolver maps the logical view name to a physical view (e.g., a JSP file).
+6.	DispatcherServlet renders the view with the model data and sends the response back to the client4.
+ 
