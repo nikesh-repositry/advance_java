@@ -1129,4 +1129,36 @@ Spring provides comprehensive testing support, including integration with JUnit 
 •	Lightweight and Non-Intrusive:
 Spring is a lightweight framework that does not force you to use everything; you can integrate it with existing solutions and use only what you need, making it flexible for a wide range of Java applications
 
- 
+
+=13. Discuss the possible exceptions that can be thrown by Spring DAO classes.
+Spring DAO (Data Access Object) classes throw exceptions that are part of Spring’s unified, unchecked exception hierarchy rooted at org.springframework.dao.DataAccessException. This hierarchy abstracts and translates technology-specific exceptions (e.g., SQLException, HibernateException) into consistent, generic exceptions that simplify error handling across different data access technologies.
+________________________________________
+Key Spring DAO Exceptions
+•	DataAccessException (Root Exception):
+The base unchecked exception for all data access exceptions in Spring. It wraps the original technology-specific exceptions, preserving details while providing a consistent API.
+•	DataAccessResourceFailureException:
+Thrown when a resource fails completely, such as when the database is unreachable or the connection fails.
+•	DataIntegrityViolationException:
+Indicates a violation of database integrity constraints, such as unique key or foreign key violations.
+•	DuplicateKeyException:
+Specific case of integrity violation when attempting to insert a duplicate key.
+•	OptimisticLockingFailureException:
+Thrown when an optimistic locking conflict occurs, typically in concurrent update scenarios.
+•	PessimisticLockingFailureException:
+Indicates failure to acquire a database lock, including subclasses like:
+•	CannotAcquireLockException (unable to obtain a lock)
+•	CannotSerializeTransactionException (transaction serialization failure)
+•	DeadlockLoserDataAccessException (deadlock detected)
+•	ConcurrencyFailureException:
+General exception for concurrency failures, including optimistic and pessimistic locking issues.
+•	IncorrectResultSizeDataAccessException:
+Thrown when a query returns an unexpected number of rows (e.g., expecting one row but getting multiple or none).
+•	TypeMismatchDataAccessException:
+Indicates a type mismatch while mapping database values to Java types.
+•	TransientDataAccessException:
+Represents temporary failures that might succeed if retried (e.g., network glitches).
+________________________________________
+Exception Translation Mechanism
+•	Spring’s @Repository annotation triggers automatic exception translation via PersistenceExceptionTranslator, converting native exceptions (like SQLException, HibernateException) into Spring’s DataAccessException hierarchy.
+•	This ensures consistent exception handling regardless of the underlying data access technology (JDBC, Hibernate, JPA, JDO, etc.).
+
