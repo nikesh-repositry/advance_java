@@ -1092,3 +1092,16 @@ Limitations of Spring Boot
 •	Resource Consumption: Standalone applications with embedded servers may consume more resources than traditional WAR deployments on optimized application servers5.
 •	Learning Curve: While Spring Boot simplifies many tasks, understanding how auto-configuration and starters work may require learning for developers new to Spring
 
+=11. Differentiate between BeanFactory and ApplicationContext.
+BeanFactory:
+•	The simplest and most basic IoC container in Spring.
+•	Provides the core functionality for dependency injection and bean lifecycle management.
+•	Defined by the org.springframework.beans.factory.BeanFactory interface.
+•	Lazily initializes beans (creates them only when requested).
+ApplicationContext:
+•	A more advanced and feature-rich IoC container that extends BeanFactory.
+•	Defined by the org.springframework.context.ApplicationContext interface.
+•	Adds enterprise-level features like event propagation, internationalization, resource loading, and application-layer-specific contexts (e.g., web applications).
+
+
+ 
