@@ -1064,3 +1064,31 @@ Request Processing Flow
 5.	ViewResolver maps the logical view name to a physical view (e.g., a JSP file).
 6.	DispatcherServlet renders the view with the model data and sends the response back to the client4.
  
+=10. Define Spring Boot, its features, advantages and limitations.
+Spring Boot is an open-source Java framework designed to simplify the development of stand-alone, production-grade Spring-based applications. It extends the Spring platform by providing convention-over-configuration, automatic setup, and a suite of tools to streamline the process of building and deploying applications
+________________________________________
+Key Features of Spring Boot unit 5
+•	Standalone Applications: Enables creation of applications that can run independently, without requiring a separate web server or external dependencies
+•	Embedded Servers: Supports embedded servers like Tomcat, Jetty, and Undertow, so applications can be packaged as executable JARs and run directly
+•	Auto-Configuration: Automatically configures Spring and third-party libraries based on the project’s dependencies and environment, reducing manual configuration
+•	Opinionated Starters: Provides “starter” dependencies that aggregate commonly used libraries and configurations for specific use cases (e.g., web, data, security) 
+•	Production-Ready Features: Includes built-in support for metrics, health checks, logging, and externalized configuration for robust production deployments
+•	No XML Required: Eliminates the need for verbose XML configuration; most setup is annotation- or property-based
+•	Spring Boot Initializr: Offers a web-based tool to quickly bootstrap new projects with the required dependencies
+•	Actuator: Provides endpoints for monitoring and managing applications in production
+________________________________________
+Advantages of Spring Boot
+•	Rapid Development: Drastically reduces setup and configuration time, allowing developers to focus on business logic rather than boilerplate code146.
+•	Ease of Use: Simplifies dependency management and configuration through starters and auto-configuration14.
+•	Microservices Support: Well-suited for building microservices architectures, enabling modular, independent, and scalable services6.
+•	Embedded Servers: Eliminates the need for deploying to external web servers, making deployment and testing easier156.
+•	Production-Ready: Built-in features like health checks, metrics, and logging support robust, production-grade applications156.
+•	Community and Ecosystem: Backed by a large community and integrates seamlessly with other Spring projects and popular Java technologies45.
+________________________________________
+Limitations of Spring Boot
+•	Less Flexibility: The opinionated defaults may limit customization for complex or legacy applications that require fine-grained control over configuration45.
+•	Larger Application Size: Embedded servers and bundled dependencies can lead to larger executable files compared to traditional deployments5.
+•	Hidden Complexity: Auto-configuration can sometimes obscure what is happening under the hood, making debugging and troubleshooting more challenging4.
+•	Resource Consumption: Standalone applications with embedded servers may consume more resources than traditional WAR deployments on optimized application servers5.
+•	Learning Curve: While Spring Boot simplifies many tasks, understanding how auto-configuration and starters work may require learning for developers new to Spring
+
