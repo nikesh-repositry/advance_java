@@ -1104,4 +1104,29 @@ ApplicationContext:
 •	Adds enterprise-level features like event propagation, internationalization, resource loading, and application-layer-specific contexts (e.g., web applications).
 
 
+=12. Discsss some of the important features of Spring Framework?
+•	Inversion of Control (IoC):
+Spring uses IoC to manage object creation and wiring, allowing developers to focus on business logic. This leads to loose coupling between components, making the application easier to test, maintain, and extend
+•	Dependency Injection (DI):
+Spring provides powerful dependency injection mechanisms (constructor, setter, and field injection). This makes it easy to manage dependencies, swap implementations, and write modular code
+•	Aspect-Oriented Programming (AOP):
+With AOP, Spring allows separation of cross-cutting concerns like logging, security, and transaction management from business logic. This keeps code clean and focused
+•	Modular Architecture:
+Spring is organized into about 20 modules grouped into core, data access/integration, web, AOP, instrumentation, and test. Developers can use only the modules they need, keeping applications lightweight and efficien
+•	Spring MVC (Model-View-Controller):
+Spring provides a robust MVC web framework for building flexible and loosely coupled web applications. It supports request mapping, view resolution, data binding, and validation, making web development easier
+•	
+•	Transaction Management:
+Spring offers a consistent programming model for transaction management, supporting both programmatic and declarative transactions. It integrates with various transaction management APIs and resources
+•	Data Access Integration:
+Spring simplifies data access using predefined templates for JDBC, Hibernate, JPA, and other ORM frameworks. This reduces boilerplate code and handles resource management automatically
+•	Bean Scopes
+Spring supports multiple bean scopes such as singleton, prototype, request, session, application, and websocket. This gives developers control over the lifecycle and visibility of beans within the application
+•	Internationalization (i18n) and Localization:
+Built-in support for internationalization allows applications to easily support multiple languages and regions using resource bundles and message sources
+•	Testing Support:
+Spring provides comprehensive testing support, including integration with JUnit and TestNG. Its IoC and DI features make unit testing and mocking dependencies straightforward
+•	Lightweight and Non-Intrusive:
+Spring is a lightweight framework that does not force you to use everything; you can integrate it with existing solutions and use only what you need, making it flexible for a wide range of Java applications
+
  
